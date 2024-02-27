@@ -47,6 +47,10 @@
 		//embedded_svc.addEventHandler("onSettingsCallCompleted", function(data) {
     		//	console.log("onSettingsCallCompleted event was fired. Agent availability status is " + data.isAgentAvailable ? "online": "offline");
 		//});
+
+		window.addEventListener("onEmbeddedMessagingReady", () => {            
+			console.log( "Inside Prechat API!!" );
+		});
 		
 		embedded_svc.init(
 			'https://appliedsystems--devprob.sandbox.my.salesforce.com',
