@@ -48,6 +48,10 @@
     			console.log("onSettingsCallCompleted event was fired. Agent availability status is " + data.isAgentAvailable);
 		});
 
+		embedded_svc.addEventHandler("onChatRequestSuccess", function(data) {
+    			console.log("onChatRequestSuccess event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+		});
+		
 		window.addEventListener("onEmbeddedMessagingReady", () => {            
 			console.log( "Inside Prechat API!!" );
 		});
