@@ -55,6 +55,11 @@
 		embedded_svc.addEventHandler("onChatConferenceInitiated", function(data) {
    			console.log("onChatConferenceInitiated event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
 		});
+
+		embedded_svc.addEventHandler("onInvitationResourceLoaded", function() {
+    			console.log("onInvitationResourceLoaded event was fired.");
+		});
+
 		
 		window.addEventListener("onEmbeddedMessagingReady", () => {            
 			console.log( "Inside Prechat API!!" );
